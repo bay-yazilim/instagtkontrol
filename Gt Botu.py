@@ -7,9 +7,9 @@ import instaloader
 instagram = instaloader.Instaloader()
 
 
-def böl3():
+def Tara():
     try:
-        profil = instaloader.Profile.from_username(instagram.context,tarama.get())
+        profil = instaloader.Profile.from_username(instagram.context,taranankul.get())
         takipciler = profil.get_followers()
         takipcilerListesi = list()
         takipEdilenlerListesi = list()
@@ -36,10 +36,10 @@ def böl3():
 
 def Giris():
     try:
-        Ad = kulad.get()
+        Ad = kuladı.get()
         sifree = sifre.get()
         instagram.login(Ad, sifree)
-        fs = tk.Button(text="Tara", bg="black", fg="white", command=böl3)
+        fs = tk.Button(text="Tara", bg="black", fg="white", command=Tara)
         fs.place(x="120", y="320")
         print("Tamam")
     except:
@@ -50,23 +50,23 @@ pen.title("Gt Kontrol")
 pen.geometry("350x570+500+100")
 pen.resizable(width=False, height=False)
 
-Botbaslik = tk.Label(text="İnstagram Gt Kontrol", font="Verdana 21 bold").pack()
+Baslık = tk.Label(text="İnstagram Gt Kontrol", font="Verdana 21 bold").pack()
 
 img = PhotoImage(file="insta.png")
 img = img.subsample(2,2)
 
 insta = tk.Label(image=img).pack()
 
-kulad = tk.Entry()
-kulad.pack()
+kuladı = tk.Entry()
+kuladı.pack()
 
 sifre = tk.Entry(show="*")
 sifre.pack()
 
-giris = tk.Button(text="Giris" ,command=Giris).pack()
+girisbuton = tk.Button(text="Giris" ,command=Giris).pack()
 
-tarama = tk.Entry()
-tarama.pack()
+taranankul = tk.Entry()
+taranankul.pack()
 
 
 pen.mainloop()
